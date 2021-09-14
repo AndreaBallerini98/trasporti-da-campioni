@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 25% 41% 9% 25%;
+    grid-template-rows: 10% 90% 65%;
+    grid-template-areas: "nav nav nav nav" "void main main void1" "fr fr fr an";
+}
+
+nav {
+    background-color: blue;
+    overflow: hidden;
+    grid-area: nav;
+    position: fixed;
+    width: 99%;
+    border-radius: 40px;
+    top: 4px;
+    height: 10%;
+    z-index: 10;
+}
+
+nav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 18px 20px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 25px;
+    transition: .7s;
+}
+
+nav a:hover {
+    background-color: rgb(14, 174, 248);
+    color: black;
+    border-radius: 40px;
+}
+
+nav a.active {
+    background-color: rgb(14, 174, 248);
+    color: black;
+    border-radius: 30px;
+}
+
+nav a.active:hover {
+    background-color: rgb(14, 174, 248);
+    color: black;
+}
+
+.logo {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: 70px;
+    border-radius: 15px;
+}
+
+.hover:hover {
+    transform: scale(1.05);
+    transition: .4s;
+}
+
+#contenuto {
+    border-radius: 40px;
+    border: 3px solid black;
+    background-color: yellowgreen;
+    grid-area: main;
+}
+
+#void {
+    grid-area: void;
+}
+
+#void1 {
+    grid-area: void1
+}
+
+#Franco {
+    grid-area: fr;
+    margin-top: 30px;
+}
+
+#Andrea {
+    grid-area: an;
+    margin-top: 30px;
+    border-left: grey 2px solid;
+}
+
+.foto1 {
+    display: block;
+    margin-left: 5%;
+    margin-top: 5%;
+    height: 70%;
+    border-radius: 50%;
+}
+
+.foto2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    height: 45%;
+    border-radius: 50%;
+}
+
+.CEO {
+    float: right;
+    width: 40%;
+    height: 90%;
+    margin-right: 10%;
+    font-size: 17px;
+}
+
+.wrapper {
+    display: inline-flex;
+}
+
+.wrapper .icon {
+    margin: 0 20px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon span {
+    display: block;
+    height: 60px;
+    width: 60px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon span i {
+    line-height: 60px;
+    font-size: 25px;
+}
+
+.wrapper .icon .tooltip {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+    color: #fff;
+    padding: 10px 18px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 25px;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -70px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.icon .tooltip:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%) rotate(45deg);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover span {
+    color: #fff;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip:before {
+    background: #3B5999;
+}
+
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip:before {
+    background: #e1306c;
+}
